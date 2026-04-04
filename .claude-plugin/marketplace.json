@@ -1,0 +1,22 @@
+{
+  "name": "vietnam-investing-agent",
+  "owner": {
+    "name": "Tung Le Anh",
+    "email": "tungleanh@example.com"
+  },
+  "metadata": {
+    "description": "Macro and sector rotation analysis tools for the Vietnamese stock market",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "financial-analysis",
+      "description": "CFA-level fundamental analyst for Vietnamese stock market. Analyzes macro conditions, sector rotation, company screening, and generates investment signals. Use when asked about GDP, CPI, sector outlook, P/E ratios, EPS growth, or any fundamental analysis of HOSE/HNX listed companies.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/fundamental-analyst"
+      ]
+    }
+  ]
+}
