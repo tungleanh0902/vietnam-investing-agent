@@ -8,11 +8,11 @@ Combines two data sources:
 
 Rate limiting is enforced for vnstock3 Community tier (55 req/min with safety margin).
 
-Environment Variables:
-  DNSE_API_KEY     - DNSE LightSpeed API Key (required for OHLC)
-  DNSE_API_SECRET  - DNSE LightSpeed API Secret (required for OHLC)
-  API_KEY          - vnstock API key for Community tier (60 req/min)
-"""
+    Environment Variables:
+      DNSE_API_KEY     - (Optional/Deprecated) DNSE LightSpeed API Key
+      DNSE_API_SECRET  - (Optional/Deprecated) DNSE LightSpeed API Secret
+      API_KEY          - vnstock API key for Community tier (60 req/min)
+    """
 
 import asyncio
 import csv
@@ -284,7 +284,7 @@ async def dnse_get_ohlc(params: OHLCInput) -> str:
     Retrieves price and volume data for Vietnamese stocks, indices (VN-Index, VN30),
     and derivatives. Supports multiple timeframes from 1-minute to weekly candles.
 
-    Data source: DNSE LightSpeed API (requires DNSE_API_KEY & DNSE_API_SECRET env vars).
+    Data source: DNSE Chart/Market Data API (public, no auth required).
 
     Returns:
         JSON with list of candle records, each containing:

@@ -12,4 +12,4 @@ This repository contains skills and MCP servers for analyzing the Vietnamese sto
 
 Agents launched in this folder will automatically read the `.claude-plugin/marketplace.json` to load the `fundamental-analyst` skill. 
 
-Make sure your environment variables (like `DNSE_API_KEY`, etc. if you use `vnstock-mcp`) are set in a `.env` file at the root of this project.
+Make sure your environment variables (like `API_KEY` for vnstock3) are set in a `.env` file at the root of this project.
