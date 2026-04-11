@@ -119,6 +119,25 @@ Based on the above, classify the current macro regime into one of these archetyp
 
 Produce the **Macro Summary** section with: regime label, confidence level (High/Medium/Low), and 3-5 bullet points of the key drivers.
 
+### 2.4 VnBondLab Quantitative Macro Assessment
+
+To ground the qualitative macro assessment, utilize the **VnBondLab Macro Analysis Framework** (detailed in `references/vnbondlab_macro_guide.md`).
+- **Data Gathering**: Use web search to find the latest available values for the Vietnam Interbank Rate, VN10Y yield, VN02Y yield, US10Y yield, and the SBV Policy Rate.
+- **Pillar Analysis**: Evaluate the 4 interest rate pillars (Liquidity Stress, Yield Slope, Sovereign Spread, Policy Spread).
+- **Risk Layer Assessment**: Identify the source of risk across Layer 1 (Funding), Layer 2 (Cycle), and Layer 3 (External).
+- **Risk Bucket**: Assign an estimated Risk Score (0-100%) and classify the environment into a designated bucket (B0 to B4).
+- **Inflation Drivers**: Assess cost-push factors (PPI, FX, Oil) rather than just headline CPI.
+
+### 2.5 Macro Overview Synthesis
+
+After completing Sections 2.1–2.4, **synthesize all findings into a cohesive Macro Overview narrative** (3–5 paragraphs). This is the most important output of Phase 1. Do NOT just list tables — write an integrated analysis that:
+
+1. **States the regime and conviction**: Open with the macro regime classification and explain WHY you chose it, referencing specific data points from both the qualitative assessment (2.1–2.3) and the VnBondLab dashboard (2.4).
+2. **Connects the dots**: Explain the causal chain — e.g., "Oil at $95 is driving CPI above 4.5%, which constrains SBV's ability to ease despite strong GDP growth. This creates tension: the real economy is expanding (GDP 7.83%) but the financial system shows stress (interbank peaked at 9%)."
+3. **Identifies the dominant risk vector**: Which of the 3 risk layers is most concerning RIGHT NOW? What layer is improving? What is the net direction?
+4. **Provides actionable framing for the next phases**: End with a clear statement like "This environment favors [sector types] and penalizes [sector types]. Position sizing should be [aggressive/moderate/conservative] because [transition logic]."
+5. **Flags the key risk scenarios**: What 1-2 events would change the macro view entirely?
+
 ---
 
 ## 3. Phase 2 — Sector Rotation & Capital Flow
@@ -256,7 +275,7 @@ Assign each company a signal based on the totality of evidence:
 For each signal, state:
 - **Upside Target**: Based on mean-reversion to fair P/E or P/B, or DCF if appropriate.
 - **Downside Risk**: What could go wrong? (e.g., macro shock, earnings miss, VND depreciation.)
-- **Position Sizing Suggestion**: High-conviction (full position) vs. Low-conviction (half position or wait for pullback).
+- **Position Sizing Suggestion**: High-conviction (full position) vs. Low-conviction (half position or wait for pullback). Incorporate the **Transition Matrix Logic** (from VnBondLab): if the macro risk regime is deteriorating, reduce sizing. If improving, sizing can be increased.
 - **Risk/Reward Ratio**: Target upside % ÷ Expected downside %. Only recommend positions with R/R > 2:1.
 
 ---
@@ -274,6 +293,15 @@ ALWAYS produce the final report using this exact structure. Use markdown formatt
 **Confidence**: [High / Medium / Low]
 **Risk Level**: [Low / Moderate / Elevated / High]
 
+### 1b. VnBondLab Macro Risk Dashboard
+| Metric | Value | Assessment |
+|--------|-------|------------|
+| Risk Score | ~XX% | Bucket BX ([B0-B4 label]) |
+| Layer 1 (Funding) | [Spread Values] | [OK/Warning] |
+| Layer 2 (Cycle) | [Spread Values] | [OK/Warning] |
+| Layer 3 (External) | [Spread Values] | [OK/Warning] |
+| Transition Outlook | [Sticky/Improving/Deteriorating] | [Action context] |
+
 ### Global Factors
 | Factor | Assessment | Trend |
 |--------|-----------|-------|
@@ -288,7 +316,9 @@ ALWAYS produce the final report using this exact structure. Use markdown formatt
 | GDP Growth (latest Q) | X.X% YoY | [Above/At/Below target] |
 | ... | ... | ... |
 
-**Key Takeaway**: [2-3 sentence summary of the macro picture and its implication for equities]
+### Macro Overview
+
+[Write 3-5 paragraphs synthesizing the VnBondLab dashboard, global factors, and Vietnam domestic data into a cohesive narrative. Explain the regime, the dominant risk vector, how the layers interact, what the transition direction implies for portfolio positioning, and the key risk scenarios that would change the view. This is the most important section — it should read like a professional macro strategist's assessment, not a data dump.]
 
 ---
 
@@ -385,6 +415,7 @@ ALWAYS produce the final report using this exact structure. Use markdown formatt
 For deeper methodology details, load these reference files as needed:
 
 - [📋 Macro Analysis Framework](./references/macro_framework.md) — Detailed scoring rubric for global and Vietnam macro factors, historical regime examples, and SBV policy transmission mechanism
+- [📋 VnBondLab Macro Guide](./references/vnbondlab_macro_guide.md) — Quantitative risk buckets, interest rate pillars, layer analysis, and transition logic.
 - [📋 Financial Ratio Reference](./references/financial_ratios.md) — Complete glossary of all financial ratios used in screening, with formulas, sector-specific benchmarks for Vietnamese equities, and interpretation guidelines
 
 ---
@@ -395,6 +426,7 @@ When executing this skill, follow this checklist to ensure completeness:
 
 - [ ] **Macro**: Collected global macro data (Fed, DXY, VIX, China PMI, geopolitics, commodities)
 - [ ] **Macro**: Collected Vietnam domestic data (SBV, GDP, CPI, credit growth, FDI, VND)
+- [ ] **Macro**: Computed VnBondLab interest rate pillars and assigned a Risk Bucket (B0-B4)
 - [ ] **Macro**: Classified the macro regime with confidence level
 - [ ] **Sector**: Scored all sectors on the 5-dimension matrix
 - [ ] **Sector**: Identified top 2-3 focus sectors with justification
