@@ -311,7 +311,9 @@ These are approximate ranges based on historical data (2020-2025). Use for relat
 
 ## 10. DuPont Analysis Framework
 
-Break down ROE into its three drivers to understand **how** a company generates its return:
+### 10.1 Three-Factor DuPont (Quick View)
+
+Break down ROE into three core drivers:
 
 ```
 ROE = Net Margin × Asset Turnover × Equity Multiplier
@@ -322,17 +324,78 @@ where:
   Equity Mult.   = Total Assets / Equity         (Leverage)
 ```
 
-### Interpretation Matrix
-
 | High ROE Driven By | Implication | Sustainability |
 |--------------------|-------------|---------------|
-| High Net Margin | Pricing power, brand moat, cost advantage | High — typically sustainable competitive advantage |
+| High Net Margin | Pricing power, brand moat, cost advantage | High — sustainable competitive advantage |
 | High Asset Turnover | Operating efficiency, lean model | Medium — can be competed away |
-| High Equity Multiplier | Heavy leverage | Low — fragile in downturns, interest rate sensitive |
+| High Equity Multiplier | Heavy leverage | Low — fragile in downturns, rate-sensitive |
 
-**Best combination**: High margin + moderate turnover + low leverage = quality compounder (e.g., VNM, FPT).
+---
 
-**Worst combination**: Low margin + low turnover + high leverage = value trap (often seen in overleveraged real estate developers that report accounting profits but generate no cash).
+### 10.2 Five-Factor DuPont (CFA L2 Full Decomposition)
+
+Splits the 3-factor Net Margin into two components to reveal **exactly where** profitability is coming from or leaking:
+
+```
+ROE = Tax Burden × Interest Burden × EBIT Margin × Asset Turnover × Equity Multiplier
+
+where:
+  Tax Burden      = Net Income / EBT              = (1 - effective tax rate)
+  Interest Burden = EBT / EBIT                    = 1 - (Interest/EBIT)
+  EBIT Margin     = EBIT / Revenue                = Operating profitability
+  Asset Turnover  = Revenue / Avg Total Assets    = Capital efficiency
+  Equity Mult.    = Avg Total Assets / Avg Equity = Leverage
+
+  → ROE = (NI/EBT) × (EBT/EBIT) × (EBIT/Rev) × (Rev/Assets) × (Assets/Equity)
+  → Verify: all intermediate fractions cancel →  NI / Equity = ROE ✓
+```
+
+#### Why 5-Factor is Superior
+
+The 3-factor model lumps Tax Burden + Interest Burden into Net Margin, making it impossible to distinguish:
+- "ROE fell because operating margins compressed" (competitive pressure)
+- "ROE fell because interest expense surged" (over-leveraging)
+- "ROE improved because tax rate dropped" (one-off, not sustainable)
+
+The 5-factor model separates these cleanly.
+
+#### Five-Factor Interpretation Table
+
+| Factor | Improving (↑) | Deteriorating (↓) | What to Look For |
+|--------|--------------|-------------------|------------------|
+| **Tax Burden** (NI/EBT) | Tax rate ↓ → more of EBT kept | Tax rate ↑ or deferred recognition | Check if tax benefit is recurring (permanent) or one-off |
+| **Interest Burden** (EBT/EBIT) | Less interest expense → less leveraged | More debt / rising rates → burden rises | Watch debt issuance, interest rate sensitivity |
+| **EBIT Margin** (EBIT/Rev) | Operating efficiency ↑, pricing power | Cost increases, competition → margin squeeze | Core operational signal — most important for structural analysis |
+| **Asset Turnover** (Rev/Assets) | More revenue per unit of assets | Asset bloat, overinvestment | Improving = lean, efficient model |
+| **Equity Multiplier** (Assets/Equity) | — | Rising = more leverage = fragility | High leverage sustainable only if EBIT Margin > cost of debt |
+
+#### Vietnam Application Examples
+
+**VNM (VietnamDairy):**
+```
+ROE = 0.80 × 0.96 × 16% × 1.6x × 1.3x ≈ 16-18%
+  → High Tax Burden (low taxes, ↑)
+  → High Interest Burden (minimal debt, ↑)
+  → Strong EBIT Margin (brand moat)
+  → Moderate turnover (consumer staples)
+  → Low leverage (conservative balance sheet)
+→ Quality: ALL drivers healthy. ROE is REAL.
+```
+
+**Overleveraged RE developer:**
+```
+ROE = 0.75 × 0.70 × 8% × 0.4x × 5.0x ≈ 8-10%
+  → Tax Burden OK
+  → Low Interest Burden (high debt cost eating EBT)
+  → Low EBIT Margin (land costs / construction delays)
+  → Very low turnover (slow asset monetization)
+  → Very high leverage (5x!)
+→ WARNING: ROE propped up ENTIRELY by leverage. One rate hike or sales slowdown = ROE collapses.
+```
+
+**Best combination**: High EBIT Margin + moderate turnover + low leverage + low interest burden = quality compounder (VNM, FPT).
+
+**Worst combination**: Low EBIT margin + low turnover + high leverage + high interest burden = value trap (overleveraged real estate / commodities at cycle bottom).
 
 ---
 

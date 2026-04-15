@@ -330,15 +330,59 @@ For each sector, assess these signals:
 - Are there specific policy catalysts? (e.g., SBV rate cut → Banks & Real Estate; public investment push → Construction & Materials.)
 - Are there sector-specific news catalysts? (e.g., new FDI factory → Industrial Parks; oil price surge → Energy.)
 
-### 3.3 Sector Scoring Matrix
+### 3.3 Industry Lifecycle Classification
+
+For each focus sector, classify its **lifecycle stage** — it directly drives which valuation model to use and what growth rate is credible.
+
+| Stage | Characteristics | Valuation Approach | VN Sectors (2026) |
+|-------|----------------|-------------------|-------------------|
+| **Growth** | Revenue growing 15%+/yr, market still being defined, high CapEx | DCF/FCFF, forward P/E (high acceptable) | Technology (FPT), Industrial Parks, EV/Green Energy |
+| **Mature** | Revenue growth 5-12%/yr, stable margins, pricing power established | DDM, EV/EBITDA, justified P/B | Banking (top-tier), Consumer Staples (VNM), Securities |
+| **Shakeout** | Consolidating, weak players exit, margins volatile | EV/replacement cost, P/B < 1 screen | Some rural banks, commodity chemicals |
+| **Decline** | Revenue shrinking, capex minimal, harvest mode | Low P/E trap, dividend yield | Traditional retail, some print media |
+
+**Vietnam-specific note**: Many sectors appear "growth" in absolute terms due to the economy growing at 7-8%, but their *relative* lifecycle stage still matters for valuation multiple justification. Always compare growth vs. GDP growth to determine true lifecycle position.
+
+### 3.4 Porter's Five Forces Analysis
+
+For each focus sector, score each force (1=Weak, 3=Moderate, 5=Strong/Threatening). Higher total score = more competitive pressure = more margin compression risk.
+
+| Force | Measure | Score (1-5) |
+|-------|---------|-------------|
+| **Threat of New Entrants** | Capital barriers, regulatory licenses, brand investment needed | 1=Very high barriers (protected), 5=Easy to enter |
+| **Supplier Bargaining Power** | Few suppliers, no substitutes, switching costs | 1=Suppliers weak, 5=Suppliers dominate pricing |
+| **Buyer Bargaining Power** | Fragmented buyers, sticky demand vs. concentrated bulk buyers | 1=Buyers weak, 5=Buyers set the price |
+| **Threat of Substitutes** | Alternative products/services that meet same need | 1=No substitutes, 5=Many cheap substitutes |
+| **Competitive Rivalry** | Number of competitors, growth rate, differentiation | 1=Oligopoly, 5=Price war, commoditized |
+
+**Porter's Score → Structural Attractiveness:**
+- Total 5-10: **Attractive** — sector has structural moat, above-average long-run margins
+- Total 11-16: **Moderate** — competitive but manageable; execution/quality matters
+- Total 17-25: **Unattractive** — commoditized, no pricing power, avoid unless cycle play
+
+**Vietnam sector quick-scores:**
+
+| Sector | New Entrants | Suppliers | Buyers | Substitutes | Rivalry | Total | Assessment |
+|--------|------------|---------|--------|------------|---------|-------|------------|
+| Banking (licensed) | 1 | 2 | 2 | 2 | 3 | 10 | Attractive (regulatory moat) |
+| Technology (FPT) | 2 | 2 | 3 | 2 | 2 | 11 | Moderate-Attractive |
+| Securities | 2 | 1 | 3 | 2 | 4 | 12 | Moderate (fee war risk) |
+| Real Estate | 3 | 3 | 2 | 2 | 4 | 14 | Moderate |
+| Steel/Materials | 3 | 4 | 4 | 3 | 5 | 19 | Unattractive (commodity) |
+| Retail (MWG, FRT) | 3 | 2 | 4 | 4 | 4 | 17 | Unattractive-Moderate |
+
+> **Practical rule**: Only assign high valuation multiples (P/E > 18x, EV/EBITDA > 12x) to sectors with Porter's score ≤ 12. Sectors with score > 17 should trade at discount to market even with strong earnings.
+
+### 3.5 Sector Scoring Matrix
 
 Score each sector on a 1-5 scale across these dimensions and compute a weighted total:
 
 | Dimension | Weight | How to Score |
 |-----------|--------|-------------|
-| Macro Alignment | 30% | How well does the sector fit the current macro regime? |
-| Earnings Momentum | 25% | Are sector aggregate earnings growing? Are estimates being revised up? |
-| Capital Flow | 25% | Is money flowing in (volume, foreign flow, breadth)? |
+| Macro Alignment | 25% | How well does the sector fit the current macro regime? |
+| Earnings Momentum | 20% | Are sector aggregate earnings growing? Are estimates being revised up? |
+| Capital Flow | 20% | Is money flowing in (volume, foreign flow, breadth)? |
+| Structural Attractiveness (Lifecycle + Porter) | 15% | Is the sector in a favorable lifecycle stage with structural moat? |
 | Valuation Attractiveness | 10% | Is the sector cheap vs. its own 3-year history? |
 | Catalyst Proximity | 10% | Is there a near-term catalyst (policy, earnings season, event)? |
 
@@ -369,7 +413,7 @@ Eliminate companies that fail any of these red flags:
 For companies that pass the first filter, compute and analyze:
 
 **Profitability**:
-- **ROE** (Return on Equity): > 15% is good; > 20% is excellent. DuPont decomposition (Margin × Turnover × Leverage) to understand the driver.
+- **5-Factor DuPont** (CFA L2): Decompose ROE into `Tax Burden × Interest Burden × EBIT Margin × Asset Turnover × Equity Multiplier`. Identify WHICH driver is responsible for ROE changes — only EBIT Margin and Asset Turnover improvements are structural; Tax and Interest Burden improvements may be transient. ROE > 15% good; > 20% excellent. See `financial_ratios.md §10.2` for full methodology.
 - **Gross Margin trend**: Expanding margins indicate pricing power or cost efficiency; contracting margins warn of competitive pressure.
 - **Net Margin**: Compare vs. sector average. Sustained above-average margins suggest a moat.
 
@@ -390,45 +434,115 @@ For companies that pass the first filter, compute and analyze:
 
 ### 4.3 Third Pass — Competitive Position (Moat Analysis)
 
-For the top 3-5 companies surviving the quantitative screens, briefly assess:
+For the top 3-5 companies surviving the quantitative screens, assess:
 
 - **Market Share**: Is the company #1 or #2 in its niche? Market leaders in Vietnam often enjoy regulatory moats and distribution advantages.
 - **Brand & Distribution**: Consumer-facing companies — does the brand command pricing premium?
 - **Switching Costs**: Enterprise/B2B companies — how painful is it for customers to switch?
 - **Regulatory Moat**: State-owned enterprises or license-based businesses (banks, utilities, telecom) often have protected positions.
+- **Company-level Porter's Micro-Score**: Within the sector, does THIS company sit at the favorable end of the force spectrum? (e.g., VCB has pricing power over depositors that smaller banks don't)
 
 ---
 
 ## 5. Phase 4 — Valuation & Signal Generation
 
-### 5.1 Relative Valuation
+This phase uses a **two-step approach** (CFA L2 standard):
+1. **Step A — Intrinsic Valuation**: Estimate fair value using models appropriate for the company type
+2. **Step B — Relative Valuation**: Cross-check against peers and historical multiples
+3. **Reconcile**: If intrinsic and relative diverge > 30%, explain the gap before assigning signal
+
+### 5.0 Required Return Estimation (Pre-Requisite)
+
+Before any valuation model, estimate the **cost of equity (Ke)** and **WACC** for each company.
+
+```
+Ke = Rf + β × (ERP + CRP)
+
+Vietnam parameters (April 2026):
+  Rf  = VN 10Y govt bond yield ≈ 3.2–3.5%
+  β   = see sector beta table in valuation_models.md
+  ERP = 5.0% (US market ERP)
+  CRP = 3.0–3.5% (Vietnam country risk premium)
+  → ERP + CRP ≈ 8.0–8.5%
+
+WACC = Ke × (E/V) + Kd × (1-t) × (D/V)
+  Kd  = avg lending rate for the company
+  t   = 20% (Vietnam corporate tax rate)
+```
+
+> See `valuation_models.md §1` for full methodology, sector beta table, and CRP estimation.
+
+### 5.1 Intrinsic Valuation — Select the Right Model
+
+| Company Type | Model to Use | Why |
+|---|---|---|
+| **Banks** (VCB, TCB, MBB, ACB) | **Residual Income (RI)** = BV + PV(ROE − Ke) × BV | FCF meaningless for banks; RI maps directly to P/B |
+| **Stable dividend payers** (VNM, SAB, REE) | **DDM** — Gordon or H-model | Predictable dividends, mature payout policies |
+| **Growth companies** (FPT, MWG) | **FCFE** — multi-stage | High reinvestment, variable dividends |
+| **Capital-intensive** (GAS, HPG, VHM) | **FCFF → subtract net debt** | Capital structure optimization in progress |
+| **Conglomerates** (VIC, MSN) | **SOTP** — value each division separately | Single model misses division value differences |
+
+**Residual Income (for banks):**
+```
+V₀ = BV₀ + Σ[RIₜ / (1+Ke)^t]
+RIₜ = (ROE - Ke) × BV_{t-1}
+
+Shortcut — Justified P/B:
+  P/B_fair = (ROE - g) / (Ke - g)
+```
+
+**DDM Gordon Growth (for dividend payers):**
+```
+V₀ = D₁ / (Ke - g)
+D₁ = D₀ × (1+g)
+g  = ROE × (1 - payout ratio)  → cap at VN nominal GDP ~8%
+```
+
+**FCFE Multi-Stage:**
+```
+FCFE = Net Income + D&A - CapEx - ΔNWC + Net Borrowing
+V₀ = Σ[FCFEₜ / (1+Ke)^t] + Terminal Value / (1+Ke)^n
+TV = FCFE_n × (1+g_terminal) / (Ke - g_terminal)
+```
+
+> See `valuation_models.md §2-4` for full formulas, Vietnam-specific implementation, and step-by-step worked examples.
+
+### 5.2 Relative Valuation (Cross-Check)
 
 For each surviving company, compute:
 
 | Metric | Calculation | Benchmark |
 |--------|------------|-----------|
 | **Trailing P/E** | Price / TTM EPS | vs. sector median, vs. own 3-year average |
-| **Forward P/E** | Price / Estimated next-12M EPS | vs. PEG ratio (P/E ÷ EPS growth rate); PEG < 1 is attractive |
-| **P/B** | Price / Book Value per share | vs. sector, vs. ROE-adjusted fair P/B (P/B = ROE × payout / (Ke - g)) |
-| **EV/EBITDA** | Enterprise Value / TTM EBITDA | vs. sector; useful for capital-intensive businesses |
+| **Forward P/E** | Price / Est. next-12M EPS | vs. PEG ratio (P/E ÷ EPS growth %); PEG < 1 = attractive |
+| **Justified P/B** | (ROE - g) / (Ke - g) | Compare to current P/B — gap = margin of safety or premium |
+| **EV/EBITDA** | (Market Cap + Net Debt) / EBITDA | vs. sector; capital-structure neutral |
+| **FCF Yield** | FCF / Market Cap | > 5% attractive; > 8% deep value |
 
-### 5.2 Signal Decision Framework
+### 5.3 Intrinsic vs. Relative Cross-Check
 
-Assign each company a signal based on the totality of evidence:
+| Intrinsic Signal | Relative Signal | Interpretation | Action |
+|-----------------|-----------------|----------------|--------|
+| Undervalued | Cheap (low P/E, P/B) | **High conviction LONG** | Full position |
+| Undervalued | Expensive | Market applies premium you don't see → verify moat quality | Half position, research more |
+| Overvalued | Cheap | Relative cheap but intrinsic value absent → **VALUE TRAP** | Avoid |
+| Overvalued | Expensive | Clear **AVOID / SHORT** | Short or pass |
+
+### 5.4 Signal Decision Framework
 
 | Signal | Criteria |
 |--------|----------|
-| **🟢 LONG** | Macro supportive for sector + Strong fundamentals (passes all filters) + Valuation attractive (below historical or sector average) + Identifiable near-term catalyst |
-| **🔴 SHORT** | Macro headwind for sector + Deteriorating fundamentals (negative earnings momentum, rising leverage) + Valuation stretched + Negative catalyst upcoming |
-| **🟡 WATCH** | Mixed signals — e.g., strong fundamentals but valuation expensive, or cheap but macro is uncertain. Add to watchlist with trigger condition. |
+| **🟢 LONG** | Macro supportive + Strong fundamentals + Intrinsic value below current price + Relative valuation attractive + Near-term catalyst |
+| **🔴 SHORT** | Macro headwind + Deteriorating fundamentals + Intrinsic value above current price + Valuation stretched |
+| **🟡 WATCH** | Mixed signals — e.g., good fundamentals but valuation expensive, or cheap but macro uncertain. State trigger condition explicitly. |
 
-### 5.3 Risk Assessment
+### 5.5 Risk Assessment
 
 For each signal, state:
-- **Upside Target**: Based on mean-reversion to fair P/E or P/B, or DCF if appropriate.
-- **Downside Risk**: What could go wrong? (e.g., macro shock, earnings miss, VND depreciation.)
-- **Position Sizing Suggestion**: High-conviction (full position) vs. Low-conviction (half position or wait for pullback). Incorporate the **Transition Matrix Logic** (from VnBondLab): if the macro risk regime is deteriorating, reduce sizing. If improving, sizing can be increased.
-- **Risk/Reward Ratio**: Target upside % ÷ Expected downside %. Only recommend positions with R/R > 2:1.
+- **Upside Target**: Based on intrinsic value (DCF/DDM/RI) or mean-reversion to fair P/E or justified P/B.
+- **Downside Risk**: What could go wrong? (e.g., macro shock, earnings miss, VND depreciation, NPL restatement for banks.)
+- **Position Sizing**: High-conviction (full position) vs. Low-conviction (half position). Incorporate **VnBondLab Transition Matrix**: if Risk Bucket deteriorating, reduce sizing.
+- **Risk/Reward Ratio**: Upside Target % ÷ Downside Risk %. Only recommend positions with R/R > 2:1.
 
 ---
 
@@ -605,8 +719,9 @@ For deeper methodology details, load these reference files as needed:
 
 - [📋 Macro Analysis Framework](./references/macro_framework.md) — Detailed scoring rubric for global and Vietnam macro factors, historical regime examples, SBV policy transmission mechanism, and indicator-based cycle positioning
 - [📋 VnBondLab Macro Guide](./references/vnbondlab_macro_guide.md) — Quantitative risk buckets, interest rate pillars, layer analysis, and transition logic.
-- [📋 Financial Ratio Reference](./references/financial_ratios.md) — Complete glossary of all financial ratios used in screening, with formulas, sector-specific benchmarks for Vietnamese equities, and interpretation guidelines
+- [📋 Financial Ratio Reference](./references/financial_ratios.md) — Complete glossary of all financial ratios (including 5-Factor DuPont), sector-specific benchmarks for Vietnamese equities, and interpretation guidelines
 - [📋 Leading Indicators Guide](./references/leading_indicators_guide.md) — Deep-dive on leading, coincident, and lagging indicators with Vietnam-specific adaptations, data sources, and interpretation thresholds
+- [📋 Valuation Models](./references/valuation_models.md) — **NEW** CFA L2 intrinsic valuation models: CAPM/WACC, Country Risk Premium, DDM, FCFF, FCFE, Residual Income Model, and VND currency forecasting (PPP/IRP/Fisher). Includes Vietnam-specific parameters and sector-level cost of equity table.
 
 ---
 
@@ -629,20 +744,27 @@ When executing this skill, follow this checklist to ensure completeness:
 - [ ] **Synthesis**: Written integrated narrative connecting all indicator layers
 
 **Phase 2 — Sector Analysis:**
-- [ ] **Sector**: Scored all sectors on the 5-dimension matrix
-- [ ] **Sector**: Identified top 2-3 focus sectors with macro regime justification
+- [ ] **Lifecycle**: Classified each focus sector by lifecycle stage (Growth/Mature/Shakeout/Decline)
+- [ ] **Porter**: Scored Porter's 5 Forces for each focus sector (total score → structural attractiveness)
+- [ ] **Sector**: Scored all sectors on the updated 6-dimension matrix (adds Structural Attractiveness)
+- [ ] **Sector**: Identified top 2-3 focus sectors with macro regime + lifecycle + Porter justification
 
 **Phase 3 — Company Analysis:**
 - [ ] **Company**: Retrieved financial statements for top companies in focus sectors
 - [ ] **Company**: Applied red-flag filter (eliminated weak companies)
-- [ ] **Company**: Computed quality/growth metrics (ROE, margin trends, earnings quality)
-- [ ] **Company**: Assessed competitive position for surviving candidates
+- [ ] **Company**: 5-Factor DuPont decomposition (Tax Burden × Interest Burden × EBIT Margin × Turnover × Leverage) — identify which driver is structural vs. transient
+- [ ] **Company**: Computed quality/growth metrics (margin trends, FCF quality, earnings quality OCF/NI)
+- [ ] **Company**: Assessed competitive position (moat + company-level Porter micro-score)
 
 **Phase 4 — Valuation & Signal:**
-- [ ] **Valuation**: Computed relative valuation metrics (P/E, P/B, EV/EBITDA, FCF Yield)
-- [ ] **Signal**: Assigned LONG / SHORT / WATCH with conviction, target, stop, and R/R
+- [ ] **Required Return**: Estimated Ke (CAPM: Rf + β × (ERP + CRP)) and WACC for each company
+- [ ] **Intrinsic**: Applied correct model per company type (RI for banks, DDM for dividend payers, FCFE/FCFF for growth/capex)
+- [ ] **Relative**: Computed P/E, Justified P/B, EV/EBITDA, FCF Yield vs. peer and historical
+- [ ] **Cross-check**: Reconciled intrinsic vs. relative — explained any > 30% divergence
+- [ ] **Signal**: Assigned LONG / SHORT / WATCH with conviction, R/R > 2:1 requirement
 
 **Phase 5 — Output:**
 - [ ] **Report**: Produced the full report in the required format with all indicator dashboards
+- [ ] **Currency**: Included VND assessment (PPP/IRP/DXY signals) and sector FX impact table
 - [ ] **Scenarios**: Included scenario table with action playbooks
 - [ ] **Disclaimer**: Included the standard disclaimer
