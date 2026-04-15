@@ -8,21 +8,22 @@
 4. [Macro Regime Examples (Historical)](#4-macro-regime-examples-historical)
 5. [Geopolitical Risk Scoring](#5-geopolitical-risk-scoring)
 6. [Financial Conditions Index Construction](#6-financial-conditions-index-construction)
+7. [Indicator Cycle Positioning Framework](#7-indicator-cycle-positioning-framework)
 
 ---
 
 ## 1. Global Macro Scoring Rubric
 
 Each factor is scored as **Bullish (+1)**, **Neutral (0)**, or **Bearish (-1)**.
-Sum all factor scores to get a **Global Macro Score** (range: -6 to +6).
+Sum all factor scores to get a **Global Macro Score** (range: -10 to +10).
 
 | Score Range | Interpretation |
 |------------|---------------|
-| +4 to +6 | Strongly Risk-On — favor cyclicals, growth, EM |
-| +1 to +3 | Mildly Risk-On — balanced exposure, slight tilt to risk |
-| -1 to +1 | Neutral — no clear directional bias, focus on stock-picking |
-| -3 to -1 | Mildly Risk-Off — reduce exposure, raise cash, favor defensives |
-| -6 to -3 | Strongly Risk-Off — capital preservation, hedge tail risks |
+| +7 to +10 | Strongly Risk-On — favor cyclicals, growth, EM |
+| +3 to +6 | Mildly Risk-On — balanced exposure, slight tilt to risk |
+| -2 to +2 | Neutral — no clear directional bias, focus on stock-picking |
+| -6 to -3 | Mildly Risk-Off — reduce exposure, raise cash, favor defensives |
+| -10 to -7 | Strongly Risk-Off — capital preservation, hedge tail risks |
 
 ### Factor Details
 
@@ -74,12 +75,52 @@ Sum all factor scores to get a **Global Macro Score** (range: -6 to +6).
 | Mixed commodity picture | 0 | Neutral |
 | Oil > $100; steel collapsing; food prices spiking | -1 | Input cost pressure + inflation risk for Vietnam |
 
+#### 1.7 US Interest Rate Differentials
+
+| Condition | Score | Rationale |
+|-----------|-------|-----------|
+| US-VN 10Y spread narrowing; VN real rate positive | +1 | Capital stays in VN; carry trade favorable |
+| Spread stable; real rates near zero | 0 | Neutral flow dynamics |
+| US-VN spread widening rapidly; VN real rate negative | -1 | Capital outflow pressure; VND depreciation risk |
+
+**What it tells us:** The interest rate differential is the primary driver of cross-border capital flows. When US rates are significantly higher than VN rates, money flows out of VN to chase higher yields in USD assets. The *real* rate (nominal minus CPI) matters for domestic asset allocation: negative real rates drive money into speculative assets (stocks, RE, gold).
+
+#### 1.8 Vietnam PMI (S&P Global)
+
+| Condition | Score | Rationale |
+|-----------|-------|-----------|
+| PMI > 52 for 2+ months; New Orders sub-index > 53 | +1 | Manufacturing expanding; production acceleration ahead |
+| PMI 49-52 | 0 | Near stagnation; neutral signal |
+| PMI < 48 for 2+ months; New Orders declining | -1 | Manufacturing contraction; production decline ahead in 1-2 months |
+
+**What it tells us:** PMI is the most timely indicator of manufacturing health (released monthly, ~2 weeks ahead of IIP data). The New Orders sub-index is especially valuable — it's the demand pipeline. Input Prices sub-index previews cost-push inflation 2-3 months before it appears in CPI.
+
+#### 1.9 Foreign Exchange Reserves
+
+| Condition | Score | Rationale |
+|-----------|-------|-----------|
+| Reserves > 4 months imports; growing trend | +1 | SBV has ample firepower; VND well-defended |
+| Reserves 3-4 months imports; stable | 0 | Adequate but limited room |
+| Reserves < 3 months imports; declining trend | -1 | Currency defense unsustainable; crisis risk |
+
+**What it tells us:** FX reserves are the SBV's ammunition. Declining reserves during a trade surplus = hot money outflows (very bearish). Growing reserves during a deficit = strong FDI/portfolio inflows (structurally bullish). The reserves/M2 ratio falling below 20% is a macro fragility signal used by institutions like IMF.
+
+#### 1.10 Unemployment (US & VN)
+
+| Condition | Score | Rationale |
+|-----------|-------|-----------|
+| US unemployment falling/stable < 4.5%; VN underemployment declining | +1 | Global demand healthy; VN labor market tight |
+| US unemployment stable 4.5-5.5%; VN underemployment stable | 0 | Neutral |
+| US unemployment rising > 5.5% or spiking; VN underemployment rising | -1 | US recession risk → EM selloff; VN demand weakness |
+
+**What it tells us:** For the US, unemployment is a *lagging* indicator but it has predictive power for Fed policy pivots — rising unemployment → Fed cuts → eventually bullish for EM. For VN, the official unemployment rate (~2%) is misleading because of the large informal sector. Watch **underemployment** (people working fewer hours than desired) and **labor force participation** as more sensitive gauges of economic health.
+
 ---
 
 ## 2. Vietnam Domestic Scoring Rubric
 
 Same scoring logic: **Bullish (+1)**, **Neutral (0)**, **Bearish (-1)**.
-Sum for **Vietnam Domestic Score** (range: -7 to +7).
+Sum for **Vietnam Domestic Score** (range: -10 to +10).
 
 ### Factor Details
 
@@ -139,15 +180,45 @@ Sum for **Vietnam Domestic Score** (range: -7 to +7).
 | On pace with prior year | 0 |
 | Lagging significantly behind plan and prior year | -1 |
 
+#### 2.8 Trade Balance
+
+| Condition | Score |
+|-----------|-------|
+| Trade surplus > $2B/quarter; growing trend | +1 |
+| Trade surplus narrowing or small deficit < $1B | 0 |
+| Trade deficit > $2B/quarter; widening trend | -1 |
+
+**What it tells us:** Vietnam's trade balance directly impacts VND stability and FX reserves. A shift from surplus to deficit (as seen in Q1/2026: -$3.64B) is an early warning of either overheating domestic demand, terms-of-trade deterioration, or competitiveness erosion. Decompose by partner: large surplus with US = tariff retaliation risk; growing deficit with China = input dependency.
+
+#### 2.9 Vietnam PMI
+
+| Condition | Score |
+|-----------|-------|
+| Manufacturing PMI > 52; New Orders expanding | +1 |
+| PMI 49-52; mixed signals | 0 |
+| PMI < 48; New Orders contracting for 2+ months | -1 |
+
+**What it tells us:** The most timely snapshot of manufacturing health. Leads IIP by 1-2 months. The employment sub-component reveals corporate hiring/firing confidence — declining employment within a PMI > 50 means firms are expanding output with fewer workers (productivity gains, not real expansion).
+
+#### 2.10 FX Reserves (Vietnam-specific)
+
+| Condition | Score |
+|-----------|-------|
+| Reserves growing; > 4 months imports; reserves/M2 > 25% | +1 |
+| Reserves stable; 3-4 months imports | 0 |
+| Reserves declining; < 3 months imports; reserves/M2 < 20% | -1 |
+
+**What it tells us:** SBV's policy space to defend VND. When reserves decline during a trade surplus → capital flight (very bearish). When reserves grow during a deficit → strong net FDI/portfolio inflows (structurally bullish despite trade weakness).
+
 ### Composite Score Interpretation
 
 | Vietnam Score | Global Score | Overall Assessment |
 |--------------|--------------|--------------------|
-| +5 to +7 | +4 to +6 | **Maximum Offensive** — Fully invested, leverage OK |
-| +3 to +4 | +1 to +3 | **Overweight Equities** — Sector selection matters |
-| 0 to +2 | -1 to +1 | **Neutral / Stock-Picking** — Alpha over beta |
-| -2 to -1 | -3 to -1 | **Underweight Equities** — Raise cash, hedge |
-| -7 to -3 | -6 to -3 | **Defensive Mode** — Cash, bonds, gold |
+| +7 to +10 | +7 to +10 | **Maximum Offensive** — Fully invested, leverage OK |
+| +4 to +6 | +3 to +6 | **Overweight Equities** — Sector selection matters |
+| 0 to +3 | -2 to +2 | **Neutral / Stock-Picking** — Alpha over beta |
+| -3 to -1 | -6 to -3 | **Underweight Equities** — Raise cash, hedge |
+| -10 to -4 | -10 to -7 | **Defensive Mode** — Cash, bonds, gold |
 
 ---
 
@@ -252,3 +323,96 @@ A simplified FCI (Financial Conditions Index) for Vietnam:
 | > +1 StdDev | Very Tight | Bearish — liquidity crunch, de-risk |
 
 The FCI is directionally more useful than its absolute level. A rapidly tightening FCI (from -1 to +1 in one quarter) is a strong sell signal even if the absolute level is still "loose" by historical standards.
+
+---
+
+## 7. Indicator Cycle Positioning Framework
+
+This section provides a systematic method to determine WHERE in the economic cycle Vietnam currently sits, using the three-layer indicator system.
+
+### 7.1 The Three-Layer Framework
+
+```
+Layer 1: LEADING (turn 6-12 months BEFORE the economy)
+├── S&P 500 (6M return)
+├── US Yield Curve (10Y-2Y)
+├── US Building Permits
+├── US Initial Jobless Claims (4-week avg)
+├── M2 Money Supply (US & VN)
+├── Consumer Confidence (US & VN)
+├── VN PMI New Orders sub-index
+├── SBV Credit Growth Ceiling changes
+├── FDI Registered (new commitments)
+└── VN-Index (leads VN GDP by 2-3 quarters)
+
+Layer 2: COINCIDENT (move IN SYNC with the economy)
+├── Real GDP (quarterly)
+├── Industrial Production Index (monthly)
+├── Personal Income / Real Retail Sales (monthly)
+└── Employment / Enterprise creation-dissolution (quarterly)
+
+Layer 3: LAGGING (turn 3-12 months AFTER the economy)
+├── Average Unemployment Duration
+├── Inventory-to-Sales Ratio
+├── Bank Lending Rate (Prime Rate)
+├── Unit Labor Cost
+└── Commercial Loan Outstanding (total credit)
+```
+
+### 7.2 Cycle Phase Identification
+
+| Phase | Leading | Coincident | Lagging | Duration (typical VN) |
+|-------|---------|-----------|---------|----------------------|
+| **Trough** | ↑ turning up | Still weak/flat | Still deteriorating | 2-4 months |
+| **Early Recovery** | All ↑ | Beginning to improve | Still weak (lag) | 3-6 months |
+| **Mid Expansion** | Stable positive | Accelerating | Improving | 6-18 months |
+| **Late Expansion** | ↓ turning down (divergence!) | Still strong (peaks) | Strong (peaks) | 3-6 months |
+| **Peak** | All ↓ | Decelerating | Still positive | 1-3 months |
+| **Early Contraction** | Deep negative | Declining | Beginning to weaken | 3-6 months |
+| **Recession** | Bottoming (↑ turn) | Deep negative | Deteriorating | 3-12 months |
+
+### 7.3 Cross-Validation Decision Matrix
+
+| Leading Signal | Coincident Confirms? | Lagging Confirms? | Confidence | Action |
+|---------------|---------------------|-------------------|------------|--------|
+| Expansion | Yes | Yes | **HIGH** | Full risk-on positioning |
+| Expansion | Yes | Not yet (lagging) | **MEDIUM-HIGH** | Position risk-on, but smaller size |
+| Expansion | No (divergence!) | No | **LOW** | Wait — false signal possible |
+| Contraction | Yes | Yes | **HIGH** | Full defensive positioning |
+| Contraction | Yes | Not yet | **MEDIUM-HIGH** | Begin de-risking, don't panic |
+| Contraction | No | No | **LOW** | Noise — maintain current allocation |
+| Mixed/Turning | Partial | Mixed | **MEDIUM** | Transition period — reduce position sizes, raise cash modestly |
+
+### 7.4 Vietnam-Specific Cycle Quirks
+
+Vietnam has several unique features that affect standard indicator interpretation:
+
+1. **SBV Credit Ceiling is a quantity tool, not just price**: Unlike most central banks that only use interest rates, SBV directly controls the total amount of credit each bank can extend. A ceiling increase is a MORE powerful easing signal than a rate cut.
+
+2. **Seasonal fiscal spending pattern**: Vietnam typically disburses >60% of annual public investment in H2. This creates a predictable H2 GDP acceleration that is NOT a cycle signal — it's calendar effect. Adjust for this when reading coincident indicators.
+
+3. **Structural underemployment masks labor weakness**: Official unemployment (~2%) is misleading. The informal sector absorbs displaced workers, hiding true labor market slack. Watch underemployment rate and formal sector employment growth instead.
+
+4. **FDI pipeline is a multi-year leading indicator**: Large FDI commitments (Samsung, Intel, Foxconn) take 2-3 years to translate into GDP. Registered FDI today = factory construction in 12-18 months = production in 24-36 months.
+
+5. **VN-Index correlation with global risk sentiment**: Despite being a "domestic market," VN-Index has 0.6-0.7 correlation with S&P 500 on weekly timeframes. Foreign selling accounts for 15-20% of trading value, creating disproportionate price impact during risk-off episodes.
+
+6. **Gold price as domestic inflation barometer**: Vietnamese households hold an estimated $50-60B in gold. Gold price movements in VN affect wealth perception and consumer confidence more than in most other economies.
+
+### 7.5 Data Source & Release Calendar
+
+| Indicator | Source | Frequency | Typical Release | VN Equivalent |
+|-----------|--------|-----------|----------------|---------------|
+| S&P 500 | Market | Real-time | — | VN-Index |
+| US Yield Curve | FRED | Daily | — | VN10Y-VN02Y (TradingView) |
+| Building Permits | US Census | Monthly | ~17th of month | HCMC/Hanoi construction data |
+| Initial Claims | DOL | Weekly | Thursday | GSO monthly employment |
+| M2 Money Supply | Fed/SBV | Monthly | ~3 weeks lag | SBV Monthly Monetary Stats |
+| Consumer Confidence | Conf. Board | Monthly | Last Tuesday | Nielsen VN (quarterly) |
+| Real GDP | BEA/GSO | Quarterly | ~1 month lag | GSO GDP (29th following quarter) |
+| IIP | Fed/GSO | Monthly | ~2 weeks lag | GSO Monthly Industrial Report |
+| Retail Sales | Census/GSO | Monthly | ~2 weeks lag | GSO Monthly Trade & Services |
+| PMI | S&P Global | Monthly | 1st business day | Same (S&P Global VN PMI) |
+| Unemployment Duration | BLS/GSO | Monthly/Q | 1st Friday (US) | GSO Labor Survey (quarterly) |
+| Lending Rates | Fed/SBV | — | Varies | SBV, bank websites |
+| Credit Outstanding | Fed/SBV | Monthly | ~3 weeks lag | SBV Monthly Credit Report |
