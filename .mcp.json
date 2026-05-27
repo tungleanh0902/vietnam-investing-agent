@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "vnstock": {
+      "command": "python",
+      "args": ["mcp-servers/vnstock-mcp/server.py"]
+    }
+  }
+}
